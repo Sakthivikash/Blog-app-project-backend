@@ -43,6 +43,7 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-app.listen("5000", () => {
-  console.log("Backend is running...");
+const Port = process.env.PORT || 5000;
+app.listen(Port, () => {
+  console.log(`Backend is running on ${Port}`);
 });
